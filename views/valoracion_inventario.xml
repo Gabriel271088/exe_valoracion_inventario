@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+    <record id="stock_valuation_inherit_tree" model="ir.ui.view">
+        <field name="name">stock.valuation.inherit.tree</field>
+        <field name="model">stock.valuation.layer</field>
+        <field name="inherit_id" ref="stock_account.stock_valuation_layer_tree"/>
+        <field name="arch" type="xml">
+            <field name="value" position="before">
+                <field name="total_costo" />
+            </field>
+        </field>
+    </record>
+  </data>
+</odoo>
