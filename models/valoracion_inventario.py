@@ -11,4 +11,4 @@ class ValoracionStock(models.Model):
     @api.depends('product_id')
     def _compute_total(self):
         for c in self:
-            c.total_costo = c.product_id.qty_available * c.product_id.with_company(c.company_id).replenishment_cost
+            c.total_costo = c.quantity * c.product_id.with_company(c.company_id).replenishment_cost
